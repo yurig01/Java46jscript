@@ -1,0 +1,53 @@
+
+//Hw #10 definition
+//1.by using  only two letters "a", "s" print out word "ananas" case incentitive (AnaNas)
+//2.write function calculate that can perform any arithmetic operation on two numbers (*,/,+,-);
+//3.write any example for running the following expression fun(5)(10, 3).
+
+console.log("a" + "a" * "a" + "a" + "s");
+
+
+function sinq (a, b){
+    return a / b;
+}
+console.log(sinq(10, 3)); // intuitive
+
+
+// function sum(a) {
+//     return function(b) {
+//         return a + b;
+//     }
+// }
+// console.log (sum(5)(10, 3))
+
+function plus(x, y){
+    return x + y;
+}
+function minus(x, y){
+    return x - y;
+}
+function multiply(x, y){
+    return x * y;
+}
+function divide(x, y){
+    if(y == 0){
+        return console.log("error");
+    }
+    else return x / y;
+}
+
+function calc (x, y, z) {
+    if ( z == "+"){
+        return plus(x, y);
+    }
+    else if( z == "-" ){
+        return minus(x, y);
+    }
+    else if(z == "*") {
+        return multiply(x,y)
+    }
+    else {
+        return divide(x, y);
+    }
+     
+}
