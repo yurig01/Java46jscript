@@ -1,0 +1,18 @@
+let arr = [17, 542, -42, 68, 44, 45.5, 92, 22];
+arr.forEach((a, i, m) => console.log(`${'#' + a}`));
+function myForEach(arr, callback ) {
+    for(let ind = 0; ind < arr.length; ind++){
+        callback(arr[ind]);
+    }
+}
+function callback(el){
+    console.log(el * 2);
+}
+myForEach(arr, callback);
+
+function myMap(arr,callback) {
+    for(let ind = 0; ind < arr.length; ind++){
+        callback(arr[ind] ** 3)
+    }
+}
+myMap(arr, callback)
